@@ -1,0 +1,122 @@
+<html class="normal" type="server">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<title>LimeChat for OSX サーバログ表示確認用 0.00</title>
+	<link id="css-default" rel="stylesheet" href=""/>
+	<link id="css-theme" rel="stylesheet" href=""/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script id="js-helper" type="text/javascript" src=""></script>
+</head>
+<body class="normal" type="server">
+	<div highlight="false" class="line event" type="system" alternate="even" id="line1">
+		<span class="time">01:10 </span>
+		<span class="message" type="system">Connecting...</span>
+	</div>
+	<div highlight="false" class="line event" type="system" alternate="odd" id="line2">
+		<span class="time">01:10 </span>
+		<span class="message" type="system">Connected</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="even" id="line3">
+		<span class="time">01:10 </span>
+		<span class="message" type="debug_send">NICK user99
+</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="odd" id="line4">
+		<span class="time">01:10 </span>
+		<span class="message" type="debug_send">USER user99 8 * :user99
+</span>
+	</div>
+	<div highlight="false" class="line event" type="reply" alternate="even" id="line5">
+		<span class="time">01:10 </span>
+		<span class="message" type="reply">Please wait while we process your connection.</span>
+	</div>
+	<div highlight="false" class="line event" type="system" alternate="odd" id="line6">
+		<span class="time">01:11 </span>
+		<span class="message" type="system">Logged in</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="even" id="line7">
+		<span class="time">01:11 </span>
+		<span class="message" type="debug_send">JOIN <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel01</span> 
+</span>
+	</div>
+	<div highlight="false" class="line event" type="reply" alternate="odd" id="line8">
+		<span class="time">01:11 </span>
+		<span class="message" type="reply">Welcome to the Internet Relay Network user99!~user99@<span class="address" oncontextmenu="on_address_contextmenu()">ip.address.xxxxx.ne.jp</span></span>
+	</div>
+	<div highlight="false" class="line event" type="reply" alternate="even" id="line9">
+		<span class="time">01:11 </span>
+		<span class="message" type="reply">Your host is <span class="address" oncontextmenu="on_address_contextmenu()">irc.xxxxx.wide.ad.jp</span>, running version 2.11.0+jp8</span>
+	</div>
+	<div highlight="false" class="line event" type="reply" alternate="odd" id="line10">
+		<span class="time">01:11 </span>
+		<span class="message" type="reply">End of MOTD command.</span>
+	</div>
+	<div highlight="false" class="line event" type="mode" alternate="even" id="line11">
+		<span class="time">01:11 </span>
+		<span class="message" type="mode">user99 has changed mode: +i</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="odd" id="line12">
+		<span class="time">01:11 </span>
+		<span class="message" type="debug_send">MODE <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel01</span>
+</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="even" id="line13">
+		<span class="time">01:11 </span>
+		<span class="message" type="debug_send">WHO <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel01</span>
+</span>
+	</div>
+	<div highlight="false" class="line event" type="error_reply" alternate="odd" id="line14">
+		<span class="time">01:13 </span>
+		<span class="message" type="error_reply">Error(475): <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel03</span> Cannot join channel (+k)</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="even" id="line15">
+		<span class="time">01:14 </span>
+		<span class="message" type="debug_send">PRIVMSG <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel01</span> :通常のメッセージ通常のメッセージ</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="odd" id="line16">
+		<span class="time">01:14 </span>
+		<span class="message" type="debug_send">PRIVMSG <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel01</span> :通常のメッセージ通常のメッセージ</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="even" id="line17">
+		<span class="time">01:15 </span>
+		<span class="message" type="debug_send">TOPIC <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel01</span> 会話中に変更されたトピック</span>
+	</div>
+	<div highlight="false" class="line event" type="dcc_send_receive" alternate="odd" id="line18">
+		<span class="time">01:18 </span>
+		<span class="message" type="dcc_send_receive">Received file transfer request from test_, xxxxxx.jpg (3,200 bytes) <span class="address" oncontextmenu="on_address_contextmenu()">127.0.0.1</span>:1096</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="even" id="line19">
+		<span class="time">01:19 </span>
+		<span class="message" type="debug_send">PRIVMSG test_ :DCC SEND xxxxx.jpg 1234567890 1096 8436 2 :xxxxx.jpg</span>
+	</div>
+	<div highlight="false" class="line event" type="dcc_send_send" alternate="odd" id="line20">
+		<span class="time">01:19 </span>
+		<span class="message" type="dcc_send_send">Trying file transfer to test_, xxxxx.jpg (8,436 bytes) <span class="address" oncontextmenu="on_address_contextmenu()">127.0.0.1</span>:1096</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="even" id="line21">
+		<span class="time">01:20 </span>
+		<span class="message" type="debug_send">MODE <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel02</span> +b *!*@<span class="address" oncontextmenu="on_address_contextmenu()">ip.address.xxxxx.ne.jp</span></span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="odd" id="line22">
+		<span class="time">01:21 </span>
+		<span class="message" type="debug_send">KICK <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel02</span> user00</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="even" id="line23">
+		<span class="time">01:23 </span>
+		<span class="message" type="debug_send">PART <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel03</span> Leaving...</span>
+	</div>
+	<div highlight="false" class="line event" type="debug_send" alternate="odd" id="line24">
+		<span class="time">01:36 </span>
+		<span class="message" type="debug_send">QUIT Leaving...</span>
+	</div>
+	<div highlight="false" class="line event" type="error" alternate="even" id="line25">
+		<span class="time">01:36 </span>
+		<span class="message" type="error">Error: Closing Link: user99[~user99@<span class="address" oncontextmenu="on_address_contextmenu()">ip.address.xxxxx.ne.jp</span>] ("Leaving...")</span>
+	</div>
+	<div highlight="false" class="line event" type="system" alternate="odd" id="line26">
+		<span class="time">01:36 </span><span class="message" type="system">Disconnected</span>
+	</div>
+</body>
+</html>

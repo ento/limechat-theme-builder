@@ -1,0 +1,106 @@
+<html class="console" type="console">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<title>LimeChat for OSX 全体ログ表示確認用 0.00</title>
+	<link id="css-default" rel="stylesheet" href=""/>
+	<link id="css-theme" rel="stylesheet" href=""/>
+	<script id="js-helper" type="text/javascript" src=""></script>
+</head>
+<body class="console" type="console">
+	<div highlight="false" class="line event" clickinfo="channel 6 12" type="join" alternate="even" ondblclick="on_dblclick()" id="line1">
+		<span class="time">01:11 </span>
+		<span class="place">&lt;#channel01&gt; </span>
+		<span class="message" type="join">user99 has joined (~user99@<span class="address" oncontextmenu="on_address_contextmenu()">ip.address.xxxxx.ne.jp</span>)</span>
+	</div>
+	<div highlight="false" class="line event" clickinfo="channel 6 12" type="reply" alternate="odd" ondblclick="on_dblclick()" id="line2">
+		<span class="time">01:11 </span>
+		<span class="place">&lt;#channel01&gt; </span>
+		<span class="message" type="reply">Mode: +sn</span>
+	</div>
+	<div highlight="false" class="line event" clickinfo="unit 6" type="error_reply" alternate="even" ondblclick="on_dblclick()" id="line3">
+		<span class="time">01:13 </span>
+		<span class="place">&lt;server01&gt; </span>
+		<span class="message" type="error_reply">Error(475): <span class="channel" oncontextmenu="on_channel_contextmenu()">#channel03</span> Cannot join channel (+k)</span>
+	</div>
+	<div highlight="false" class="line text" nick="user00" clickinfo="channel 6 13" type="privmsg" alternate="odd" ondblclick="on_dblclick()" id="line4">
+		<span class="time">01:15 </span>
+		<span class="place">&lt;#channel02&gt; </span>
+		<span class="sender" type="normal" identified="false" colornumber="10" first="true">user00: </span>
+		<span class="message" type="privmsg">通常のメッセージ通常のメッセージ</span>
+	</div>
+	<div highlight="false" class="line event" clickinfo="channel 6 13" type="topic" alternate="even" ondblclick="on_dblclick()" id="line5">
+		<span class="time">01:15 </span>
+		<span class="place">&lt;#channel02&gt; </span>
+		<span class="message" type="topic">test_ has set topic: 会話中に変更されたトピック</span>
+	</div>
+	<div highlight="false" class="line event" clickinfo="channel 6 13" type="mode" alternate="odd" ondblclick="on_dblclick()" id="line6">
+		<span class="time">01:18 </span>
+		<span class="place">&lt;#channel02&gt; </span>
+		<span class="message" type="mode">test_ has changed mode: +o user99</span>
+	</div>
+	<div highlight="false" class="line event" clickinfo="unit 6" type="dcc_send_receive" alternate="even" ondblclick="on_dblclick()" id="line7">
+		<span class="time">01:18 </span>
+		<span class="place">&lt;server01&gt; </span>
+		<span class="message" type="dcc_send_receive">Received file transfer request from test_, xxxxx.jpg (3,200 bytes) <span class="address" oncontextmenu="on_address_contextmenu()">127.0.0.1</span>:1096</span>
+	</div>
+	<div highlight="false" class="line event" clickinfo="unit 6" type="dcc_send_send" alternate="odd" ondblclick="on_dblclick()" id="line8">
+		<span class="time">01:19 </span>
+		<span class="place">&lt;server01&gt; </span>
+		<span class="message" type="dcc_send_send">Trying file transfer to test_, xxxxx.jpg (8,436 bytes) <span class="address" oncontextmenu="on_address_contextmenu()">127.0.0.1</span>:1096</span>
+	</div>
+	<div highlight="false" class="line text" nick="user00" clickinfo="channel 6 13" type="notice" alternate="even" ondblclick="on_dblclick()" id="line9">
+		<span class="time">01:20 </span>
+		<span class="place">&lt;#channel02&gt; </span>
+		<span class="sender" type="normal" identified="false" colornumber="10" first="true">user00: </span>
+		<span class="message" type="notice">Notice メッセージ Notice メッセージ</span>
+	</div>
+	<div highlight="false" class="line event" type="nick" alternate="odd" id="line10">
+		<span class="time">01:22 </span>
+		<span class="place">&lt;server01&gt; </span>
+		<span class="message" type="nick">test_ is now known as user00</span>
+	</div>
+	<div highlight="false" class="line text" nick="user00" clickinfo="channel 6 13" type="privmsg" alternate="even" ondblclick="on_dblclick()" id="line11">
+		<span class="time">01:22 </span>
+		<span class="place">&lt;#channel02&gt; </span>
+		<span class="sender" type="normal" identified="false" colornumber="10" first="true">user00: </span>
+		<span class="message" type="privmsg">環境設定 → キーワードの「行全体の表示を変更する」にチェックが入っている場合</span>
+	</div>
+	<div highlight="true" class="line text" nick="user00" clickinfo="channel 6 15" type="privmsg" alternate="odd" ondblclick="on_dblclick()" id="line12">
+		<span class="time">01:22 </span>
+		<span class="place">&lt;#channel03&gt; </span>
+		<span class="sender" type="normal" identified="false" colornumber="11" first="true">user00: </span>
+		<span class="message" type="privmsg"><strong class="highlight">キーワードを含むメッセージ</strong></span>
+	</div>
+	<div highlight="false" class="line text" nick="user00" clickinfo="channel 6 13" type="privmsg" alternate="even" ondblclick="on_dblclick()" id="line13">
+		<span class="time">01:22 </span>
+		<span class="place">&lt;#channel02&gt; </span>
+		<span class="sender" type="normal" identified="false" colornumber="10" first="true">user00: </span>
+		<span class="message" type="privmsg">環境設定 → キーワードの「行全体の表示を変更する」にチェックが入っていない場合</span>
+	</div>
+	<div highlight="true" class="line text" nick="user00" clickinfo="channel 6 15" type="privmsg" alternate="odd" ondblclick="on_dblclick()" id="line14">
+		<span class="time">01:22 </span>
+		<span class="place">&lt;#channel03&gt; </span>
+		<span class="sender" type="normal" identified="false" colornumber="11" first="true">user00: </span>
+		<span class="message" type="privmsg"><strong class="highlight">キーワード</strong>を含むメッセージ</span>
+	</div>
+	<div highlight="false" class="line text" nick="user00" clickinfo="channel 6 15" type="privmsg" alternate="even" ondblclick="on_dblclick()" id="line15">
+		<span class="time">01:22 </span>
+		<span class="place">&lt;#channel03&gt; </span>
+		<span class="sender" type="normal" identified="false" colornumber="11" first="false">user00: </span>
+		<span class="message" type="privmsg">URL を含む通常のメッセージ <a class="url" href="http://limechat.net/mac/index_ja.html" oncontextmenu="on_url_contextmenu()">http://limechat.net/mac/index_ja.html</a></span>
+	</div>
+	<div highlight="false" class="line text" nick="user00" clickinfo="channel 6 15" type="privmsg" alternate="odd" ondblclick="on_dblclick()" id="line16">
+		<span class="time">01:23 </span>
+		<span class="place">&lt;#channel03&gt; </span>
+		<span class="sender" type="normal" identified="false" colornumber="11" first="false">user00: </span>
+		<span class="message" type="notice">URL を含む Notice メッセージ <a class="url" href="http://limechat.net/mac/index_ja.html" oncontextmenu="on_url_contextmenu()">http://limechat.net/mac/index_ja.html</a></span>
+	</div>
+	<div highlight="false" class="line event" clickinfo="channel 6 15" type="part" alternate="even" ondblclick="on_dblclick()" id="line17">
+		<span class="time">01:23 </span>
+		<span class="place">&lt;#channel03&gt; </span>
+		<span class="message" type="part">user00 has left (Leaving...)</span>
+	</div>
+</body>
+</html>

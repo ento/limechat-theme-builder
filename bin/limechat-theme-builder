@@ -1,0 +1,72 @@
+#!/usr/bin/env coffee
+
+events = require 'events'
+path = require 'path'
+glob = require 'glob'
+chokidar = require 'chokidar'
+flatiron = require 'flatiron'
+app = flatiron.app
+build = require path.join __dirname, '..', 'cmds', 'build'
+test = require path.join __dirname, '..', 'cmds', 'test'
+
+emitter = new events.EventEmitter
+
+options =
+  root: process.cwd()
+  libroot: path.join __dirname, '..'
+  theme: path.basename process.cwd()
+  emitter: emitter
+  src: {}
+  out: {}
+  fixture: {}
+
+options.src.dir = path.join options.root, 'src'
+options.src.less = path.join options.src.dir, options.theme + '.less'
+options.src.yaml = path.join options.src.dir, options.theme + '.yaml'
+options.out.dir = options.root
+options.out.css = path.join options.out.dir, options.theme + '.css'
+options.out.yaml = path.join options.out.dir, options.theme + '.yaml'
+options.fixture.dir = path.join options.libroot, 'fixtures'
+
+app.use flatiron.plugins.log
+app.use flatiron.plugins.cli,
+  usage: 'limechat-theme-builder build|watch|test'
+
+app.commands.build = (cb) ->
+  app.log.info 'Building..'
+  build.run options, cb
+
+app.commands.watch = (cb) ->
+  app.log.info 'Watching..'
+  srcWatcher = chokidar.watch options.src.dir,
+    ignored: /^\./
+    persistent: true
+  srcWatcher.on 'all', (path) ->
+    app.log.info 'Source files changed'
+    app.commands.build()
+  srcWatcher.on 'error', (e) ->
+    app.log.error e
+
+  testWatcher = chokidar.watch options.fixture.dir,
+    ignored: /^\./
+    persistent: true
+  testWatcher.add options.out.css
+  testWatcher.on 'all', (path) ->
+    app.log.info 'Test target changed'
+    emitter.emit 'reload'
+  testWatcher.on 'error', (e) ->
+    app.log.error e
+
+app.commands.test = (cb) ->
+  app.commands.build (e) ->
+    if e
+      app.log.error e
+      process.exit 1
+
+    app.commands.watch()
+    app.use test.plugin, options
+    app.start 1334
+    app.log.info 'Test fixtures available at http://localhost:1334/t/'
+
+app.log.info 'Theme:', options.theme
+app.start()
