@@ -1,12 +1,17 @@
+/*
+ * https://github.com/psychs/limechat/blob/master/Classes/Views/Log/LogController.m#L722
+ */
+
 html {
-	font-family: 'Osaka-Mono';
-	font-size: 10pt;
-	background-color: white;
-	color: black;
-	word-wrap: break-word;
-	margin: 0;
-	padding: 3px 4px 10px 4px;
+  font-family: 'Osaka-Mono';
+  font-size: 10pt;
+  background-color: white;
+  color: black;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 3px 4px 10px 4px;
 }
+
 body { margin: 0; padding: 0; }
 img { border: 1px solid #aaa; vertical-align: top; }
 object { vertical-align: top; }
@@ -15,14 +20,31 @@ hr { margin: 0.5em 2em; }
 .line[alternate=even] {}
 .line[alternate=odd] {}
 .line[type=action] .sender:before {
-	content: "• ";
-	white-space: nowrap;
+  content: "• ";
+  white-space: nowrap;
 }
+
+.inlineimage {
+  margin: 10px 0 15px 40px;
+  max-width: 200px;
+  max-height: 150px;
+  -webkit-box-shadow: 2px 2px 2px #888;
+}
+
+.avatar {
+  display: inline;
+  max-width: 24px;
+  max-height: 24px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
 .url { word-break: break-all; }
 .address { text-decoration: underline; word-break: break-all; }
 .highlight { color: #f0f; font-weight: bold; }
 .time { color: #048; }
 .place { color: #008; }
+
 .sender[type=myself] { color: #66a; }
 .sender[type=normal] { color: #008; }
 
