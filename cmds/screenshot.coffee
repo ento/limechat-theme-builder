@@ -11,9 +11,11 @@ renderUrl = (page, url, filename, cb) ->
       app.log.error 'Error opening', url
       cb(status)
     else
-      page.render filename, () ->
-        app.log.info path.relative process.cwd(), filename
-        cb()
+      page.get 'viewportSize', (value) ->
+        page.set 'viewportSize', {width: 800, height: value.height}, () ->
+          page.render filename, () ->
+            app.log.info path.relative process.cwd(), filename
+            cb()
 
 module.exports.run = (options, cb) ->
   if not cb
@@ -24,9 +26,6 @@ module.exports.run = (options, cb) ->
 
   phantom.create (ph) ->
     ph.createPage (page) ->
-      page.set 'viewportSize',
-        width: 512
-
       renderSample = (name, itcb) ->
         url = util.format 'http://localhost:%d/t/%s#noscript', options.port.screenshot, name
         filename = path.join options.screenshot.dir, name + '.png'
