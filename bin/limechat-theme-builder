@@ -26,8 +26,9 @@ options =
     screenshot: 1335
 
 options.src.dir = path.join options.root, 'src'
-options.src.less = path.join options.src.dir, options.theme + '.less'
-options.src.yaml = path.join options.src.dir, options.theme + '.yaml'
+options.src.less = path.join options.src.dir, 'theme.less'
+options.src.yaml = path.join options.src.dir, 'theme.yaml'
+
 options.out.dir = options.root
 options.out.css = path.join options.out.dir, options.theme + '.css'
 options.out.yaml = path.join options.out.dir, options.theme + '.yaml'
