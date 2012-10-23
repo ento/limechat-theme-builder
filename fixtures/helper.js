@@ -1,4 +1,7 @@
 (function(init) {
+  if (location.hash === '#noscript')
+    return;
+
   var readyState = document.readyState;
   if (readyState === 'complete') {
     init();

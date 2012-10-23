@@ -3,7 +3,7 @@
   "preferGlobal": "true",
   "version": "0.1.0",
   "author": "Marica Odagaki <ento.entotto@gmail.com>",
-  "description": "Helper for building LimeChat theme",
+  "description": "Helper for building LimeChat themes",
   "bin": {
     "limechat-theme-builder": "./bin/limechat-theme-builder"
   },
@@ -16,6 +16,7 @@
     "theme"
   ],
   "dependencies" : {
+    "async": "0.1.x",
     "chokidar": "0.4.x",
     "coffee-script": "1.3.x",
     "ecstatic": "0.1.x",
@@ -25,6 +26,7 @@
     "json2yaml" :  "1.0.x",
     "js-yaml"   :  "1.0.x",
     "less" :  "1.3.x",
+    "phantom": "0.3.x",
     "plates": "0.4.x",
     "union": "0.3.x"
   },
